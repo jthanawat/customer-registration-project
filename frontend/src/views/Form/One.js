@@ -16,7 +16,7 @@ import {
   Select,
   FormControl
 } from '@material-ui/core';
-import TopbarFrom from '../../layout/TopbarForm'
+import TopbarFrom from '../../layout/Form/Topbar'
 import WebcamCapture from './WebcamCapture'
 
 const schema = {
@@ -171,12 +171,12 @@ const useStyles = makeStyles(theme => ({
   submitButton: {
     margin: theme.spacing(8, 0),
     minWidth: 200,
-    
+
   },
 }))
 
 
-const TypeTwo = (props) => {
+const TypeOne = (props) => {
   const { history } = props;
   const classes = useStyles();
 
@@ -190,9 +190,14 @@ const TypeTwo = (props) => {
   //   errors: {}
   // });
 
-  const handleChange = (e) => {
+  const handleChangePlace = (e) => {
     setPlace(e.target.value);
+  }
+  const handleChangePurpose = (e) => {
     setPurpose(e.target.value);
+
+  }
+  const handleChangeProduct = (e) => {
     setProduct(e.target.value);
   }
 
@@ -251,8 +256,7 @@ const TypeTwo = (props) => {
                       select
                       label="Required"
                       value={place}
-                      onChange={handleChange}
-                      helperText="Please select your place"
+                      onChange={handleChangePlace}
                       variant="filled"
                       required
                     >
@@ -415,7 +419,7 @@ const TypeTwo = (props) => {
                       select
                       label="Select"
                       value={purpose}
-                      onChange={handleChange}
+                      onChange={handleChangePurpose}
                     >
                       {purposes.map((option) => (
                         <MenuItem key={option.value} value={option.value}>
@@ -460,7 +464,7 @@ const TypeTwo = (props) => {
                       select
                       label="Select"
                       value={product}
-                      onChange={handleChange}
+                      onChange={handleChangeProduct}
                     >
                       {products.map((option) => (
                         <MenuItem key={option.value} value={option.value}>
@@ -492,4 +496,4 @@ const TypeTwo = (props) => {
   )
 }
 
-export default TypeTwo;
+export default TypeOne;

@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles, useTheme } from '@material-ui/styles';
 import { Typography, Paper, Grid, Button, Box } from '@material-ui/core';
-import TopbarForm from '../../layout/TopbarForm';
+import FormTopbar from '../../layout/Form/Topbar';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -43,7 +43,7 @@ const LandingPage = props => {
 
   return (
     <div className={classes.root}>
-      <TopbarForm />
+      <FormTopbar />
       <div className={classes.content}>
         <Grid
           container
