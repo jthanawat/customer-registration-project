@@ -30,15 +30,15 @@ const Topbar = props => {
         <RouterLink to="/">
           <img
             alt="Logo-SynergyTechnology"
-            src="/images/logos/SynergyTechnology.svg"
+            src="/images/logos/SynergyTechnology-white.svg"
           />
           <img
             alt="Logo-Synhub"
-            src="/images/logos/Synhub-White.svg"
+            src="/images/logos/Synhub-White-2.svg"
           />
         </RouterLink>
         <div className={classes.flexGrow} />
-        <Hidden mdDown>
+        {/* <Hidden mdDown>
           <IconButton color="inherit">
 
           </IconButton>
@@ -46,9 +46,8 @@ const Topbar = props => {
             className={classes.signOutButton}
             color="inherit"
           >
-            <InputIcon />
           </IconButton>
-        </Hidden>
+        </Hidden> */}
         <Hidden lgUp>
           <IconButton
             color="inherit"

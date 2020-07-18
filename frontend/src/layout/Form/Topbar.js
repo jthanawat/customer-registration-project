@@ -27,11 +27,11 @@ const TopbarForm = props => {
       <Toolbar className={classes.logo}>
         <img
           alt="Logo-SynergyTechnology"
-          src="/images/logos/SynergyTechnology.svg"
+          src="/images/logos/SynergyTechnology-white.svg"
         />
         <img
           alt="Logo-Synhub"
-          src="/images/logos/Synhub-White.svg"
+          src="/images/logos/Synhub-White-2.svg"
         />
       </Toolbar>
     </AppBar>

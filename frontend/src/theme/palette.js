@@ -50,12 +50,6 @@ export default {
       link: colors.blueGrey[100],
       disabled: colors.blueGrey[100]
     },
-    action: {
-      active: colors.amber[100],
-      hover: colors.amber[100],
-      selected: colors.amber[100],
-      disabled: colors.amber[100]
-    },
     background: {
       default: 'F4F6F8',
       paper: white

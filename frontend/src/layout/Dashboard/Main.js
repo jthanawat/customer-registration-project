@@ -5,7 +5,6 @@ import { useMediaQuery } from '@material-ui/core';
 
 import Topbar from './Topbar'
 import Sidebar from './Sidebar'
-import Footer from './Footer'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -55,7 +54,6 @@ const Main = props => {
       <main className={classes.content}>
         {props.children}
       </main>
-      <Footer />
     </div>
   )
 }

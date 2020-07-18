@@ -6,9 +6,15 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 
 import theme from './theme'
 import Routes from './Routes';
-
+import validate from 'validate.js';
+import validators from './pages/Auth/validators';
 
 const history = createBrowserHistory();
+
+validate.validators = {
+  ...validate.validators,
+  ...validators
+};
 
 function App() {
   return (

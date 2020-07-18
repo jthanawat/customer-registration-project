@@ -17,6 +17,9 @@ const useStyles = makeStyles(theme => ({
   },
   name: {
     marginTop: theme.spacing(1)
+  },
+  body: {
+    color: theme.palette.primary.main
   }
 }));
 
@@ -45,7 +48,9 @@ const Profile = props => {
       variant="h4">
         {user.name}
       </Typography>
-      <Typography variant="body1">{user.firstName} {user.lastName}</Typography>
+      <Typography 
+      className={classes.body}
+      variant="body1">{user.firstName} {user.lastName}</Typography>
       
     </div>
   )

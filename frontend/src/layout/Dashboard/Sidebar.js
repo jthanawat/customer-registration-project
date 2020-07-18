@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/styles';
 import { Divider, Drawer } from '@material-ui/core';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import ListAltIcon from '@material-ui/icons/ListAlt';
+import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
 
 import Profile from './components/Profile'
 import SidebarNav from './components/SidebarNav'
@@ -48,6 +49,11 @@ const Sidebar = props => {
       title: 'Forms',
       href: '/form',
       icon: <ListAltIcon />
+    },
+    {
+      title: 'Logout',
+      href: '/test/signin',
+      icon: <ExitToAppOutlinedIcon />
     }
   ];
 
