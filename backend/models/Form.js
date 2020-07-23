@@ -1,42 +1,48 @@
 module.exports = (sequelize, DataTypes) => {
   const form = sequelize.define('Form', {
-    FirstName: {
+    firstName: {
       type: DataTypes.STRING(30)
     },
-    LastName: {
+    lastName: {
       type: DataTypes.STRING(30)
     },
-    Email: {
+    email: {
       type: DataTypes.STRING(50)
     },
-    LocationName: {
-      type: DataTypes.STRING
-    },
-    CompanyName: {
+    companyName: {
       type: DataTypes.STRING(50)
     },
-    PhoneNumber: {
+    phoneNumber: {
       type: DataTypes.STRING(10)
     },
-    Purpose: {
+    contactPersonName: {
       type: DataTypes.STRING
     },
-    ContactPersonName: {
+    moduleType: {
       type: DataTypes.STRING
     },
-    InterestInProduct: {
+    cardName: {
       type: DataTypes.STRING
+    },
+    pictureUrl: {
+      type: DataTypes.STRING
+    },
+    cardUrl: {
+      type: DataTypes.STRING
+    },
+    dateCreated: {
+      type: DataTypes.DATE,
+      defaultValue: new Date()
     }
   }, {
     tableName: 'forms'
   })
 
-  form.associate = (models) => {
-    form.hasMany(models.Picture, {foreignKey: 'form_id'})
-    form.belongsTo(models.Admin, {foreignKey: 'admin_id'})
+  form.associate = models => {
+    form.belongsTo(models.Location, {foreignKey: 'locationId'})
+    form.belongsTo(models.Purpose, {foreignKey: 'purposeId'})
+    form.belongsTo(models.Product, {foreignKey: 'productId'})
   }
-
-
 
   return form;
 }
