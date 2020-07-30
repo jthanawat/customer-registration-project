@@ -157,10 +157,11 @@ const SignIn = props => {
           lg={12}
           xs={12}
         >
+
           <div className={classes.content}>
             {/* <div className={classes.contentHeader}>
               <IconButton onClick={handleBack}>
-                <ArrowBackIcon />
+              <ArrowBackIcon />
               </IconButton>
             </div> */}
             <div className={classes.contentBody}>

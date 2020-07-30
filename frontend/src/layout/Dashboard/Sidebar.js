@@ -47,7 +47,7 @@ const Sidebar = props => {
     },
     {
       title: 'Forms',
-      href: '/form',
+      href: '/forms',
       icon: <ListAltIcon />
     },
     {

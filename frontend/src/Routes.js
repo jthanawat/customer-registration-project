@@ -1,68 +1,63 @@
 import React from 'react'
 import { Switch, Redirect, Route } from 'react-router-dom'
+import RouteWithLayout from './components/RouteWithLayout'
 import Dashboard from './pages/Dashboard/Dashboard'
-import LandingPage from './pages/Form/LandingPage'
-import One from './pages/Form/One'
-import Two from './pages/Form/Two'
-import Three from './pages/Form/Three'
+import Form from './pages/Forms/Forms'
 
-// ============= test ================
-import MainTopbar from './layout/Dashboard/Topbar'
-import Profile from './layout/Dashboard/components/Profile'
-import Main from './layout/Dashboard/Main'
-import SidebarNav from './layout/Dashboard/components/SidebarNav'
-import Sidebar from './layout/Dashboard/Sidebar'
+import MainLayout from './layout/Dashboard/Main'
+import LandingPage from './pages/Questionnaire/LandingPage'
+import FormOne from './pages/Questionnaire/1/Input'
+import FormTwo from './pages/Questionnaire/2/Input'
+import FormThree from './pages/Questionnaire/3/Input'
+import FinishedPage from './pages/Questionnaire/components/FinishedPage'
+
 import SignUp from './pages/Auth/SignUp'
 import SignIn from './pages/Auth/SignIn'
+import StartingPage from './pages/Questionnaire/components/StartingPage'
 // ===================================
 
 
 const Routes = () => {
   return (
     <Switch>
-      <Route
-      exact path="/test/profile"
-      component={Profile} />
-
-      <Route
-      exact path="/test/signup"
-      component={SignUp} />
-      <Route
-      exact path="/test/signin"
-      component={SignIn} />
-
-      <Route
-      exact path="/dashboard"
-      component={Main} />
-
-      <Route
-      exact path="/test/SidebarNav"
-      component={SidebarNav} />
-
-      <Route
-      exact path="/test/Sidebar"
-      component={Sidebar} />
-
-      <Redirect 
-      exact 
-      from="/" 
-      to="/dashboard" 
+      <Redirect
+        exact
+        from="/"
+        to="/dashboard"
       />
-      {/* <Route
+      <Route
+        exact path="/sign-up"
+        component={SignUp} />
+      <Route
+        exact path="/sign-in"
+        component={SignIn} />
+      <RouteWithLayout
         exact path="/dashboard"
-        component={Dashboard} /> */}
+        component={Dashboard}
+        layout={MainLayout} />
       <Route
-      exact path="/landingpage1"
-      component={LandingPage} />
+        exact path="/forms"
+        component={Form} />
+
+
       <Route
-      exact path="/form/one"
-      component={One} />
+        exact path="/starting-page"
+        component={StartingPage} />
       <Route
-      exact path="/form/two"
-      component={Two} />
+        exact path="/starting/1"
+        component={LandingPage} />
       <Route
-      exact path="/form/two"
-      component={Three} />
+        exact path="/starting/form/one"
+        component={FormOne} />
+      <Route
+        exact path="/starting/form/two"
+        component={FormTwo} />
+      <Route
+        exact path="/starting/form/three"
+        component={FormThree} />
+      <Route
+        exact path="/finished"
+        component={FinishedPage} />
     </Switch>
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef, useCallback} from 'react'
 import Webcam from "react-webcam";
 import { Button } from '@material-ui/core'
 const videoConstraints = {
@@ -8,9 +8,9 @@ const videoConstraints = {
 };
 
 const WebcamCapture = () => {
-  const webcamRef = React.useRef(null);
+  const webcamRef = useRef(null);
 
-  const capture = React.useCallback(
+  const capture = useCallback(
     () => {
       const imageSrc = webcamRef.current.getScreenshot();
     },
@@ -24,7 +24,7 @@ const WebcamCapture = () => {
           height={200}
           ref={webcamRef}
           screenshotFormat="image/jpeg"
-          width={200}
+          width={300}
           videoConstraints={videoConstraints}
         />
       </div>
