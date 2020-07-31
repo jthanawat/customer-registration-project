@@ -2,10 +2,9 @@ import React from 'react'
 import { Switch, Redirect, Route } from 'react-router-dom'
 import RouteWithLayout from './components/RouteWithLayout'
 import Dashboard from './pages/Dashboard/Dashboard'
-import Form from './pages/Forms/Forms'
+import Forms from './pages/Forms/Forms'
 
 import MainLayout from './layout/Dashboard/Main'
-import LandingPage from './pages/Questionnaire/LandingPage'
 import FormOne from './pages/Questionnaire/1/Input'
 import FormTwo from './pages/Questionnaire/2/Input'
 import FormThree from './pages/Questionnaire/3/Input'
@@ -26,38 +25,54 @@ const Routes = () => {
         to="/dashboard"
       />
       <Route
-        exact path="/sign-up"
-        component={SignUp} />
+        exact 
+        path="/sign-up"
+        component={SignUp} 
+        />
       <Route
-        exact path="/sign-in"
-        component={SignIn} />
+        exact 
+        path="/sign-in"
+        component={SignIn} 
+        />
       <RouteWithLayout
-        exact path="/dashboard"
+        exact 
+        path="/dashboard"
         component={Dashboard}
-        layout={MainLayout} />
-      <Route
-        exact path="/forms"
-        component={Form} />
+        layout={MainLayout} 
+        />
+      <RouteWithLayout
+        exact 
+        path="/forms"
+        component={Forms} 
+        layout={MainLayout}
+        />
 
 
       <Route
-        exact path="/starting-page"
-        component={StartingPage} />
+        exact 
+        path="/starting"
+        component={StartingPage} 
+        />
       <Route
-        exact path="/starting/1"
-        component={LandingPage} />
+        exact 
+        path="/starting/form/one"
+        component={FormOne} 
+        />
       <Route
-        exact path="/starting/form/one"
-        component={FormOne} />
+        exact 
+        path="/starting/form/two"
+        component={FormTwo} 
+        />
       <Route
-        exact path="/starting/form/two"
-        component={FormTwo} />
+        exact 
+        path="/starting/form/three"
+        component={FormThree} 
+        />
       <Route
-        exact path="/starting/form/three"
-        component={FormThree} />
-      <Route
-        exact path="/finished"
-        component={FinishedPage} />
+        exact 
+        path="/finished"
+        component={FinishedPage} 
+        />
     </Switch>
   )
 }

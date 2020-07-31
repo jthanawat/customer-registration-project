@@ -1,12 +1,10 @@
 import React from 'react'
 
-
-const CardForm = props => {
+const Tab = () => {
   return (
     <>
-  
     </>
   )
 }
 
-export default CardForm;
+export default Tab;

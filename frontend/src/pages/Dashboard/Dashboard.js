@@ -25,36 +25,36 @@ const Dashboard = () => {
       >
         <Grid
           item
+          xl={3}
           lg={3}
           sm={6}
-          xl={3}
           xs={12}
         >
           <ResponseResult title="ALL RESPONSES" response="1000" since="Since Last Month" percentage="5%" />
         </Grid>
         <Grid
           item
+          xl={3}
           lg={3}
           sm={6}
-          xl={3}
           xs={12}
         >
           <ResponseResult title="ALL RESPONSES" response="200" since="Since Last Week" percentage="8%" />
         </Grid>
         <Grid
           item
+          xl={3}
           lg={3}
           sm={6}
-          xl={3}
           xs={12}
         >
           <ResponseResult title="ALL RESPONSES" response="15" since="Today" percentage="12%" />
         </Grid>
         <Grid
           item
+          xl={3}
           lg={3}
           sm={6}
-          xl={3}
           xs={12}
         >
           <TotalResponse />

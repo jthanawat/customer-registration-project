@@ -52,7 +52,7 @@ const Sidebar = props => {
     },
     {
       title: 'Logout',
-      href: '/test/signin',
+      href: '/sign-in',
       icon: <ExitToAppOutlinedIcon />
     }
   ];
