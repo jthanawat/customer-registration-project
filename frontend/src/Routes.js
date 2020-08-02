@@ -10,8 +10,8 @@ import FormTwo from './pages/Questionnaire/2/Input'
 import FormThree from './pages/Questionnaire/3/Input'
 import FinishedPage from './pages/Questionnaire/components/FinishedPage'
 
-import SignUp from './pages/Auth/SignUp'
-import SignIn from './pages/Auth/SignIn'
+import Register from './pages/Auth/Register'
+import Login from './pages/Auth/Login'
 import StartingPage from './pages/Questionnaire/components/StartingPage'
 // ===================================
 
@@ -26,13 +26,13 @@ const Routes = () => {
       />
       <Route
         exact 
-        path="/sign-up"
-        component={SignUp} 
+        path="/register"
+        component={Register} 
         />
       <Route
         exact 
-        path="/sign-in"
-        component={SignIn} 
+        path="/login"
+        component={Login} 
         />
       <RouteWithLayout
         exact 
