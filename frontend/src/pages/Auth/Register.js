@@ -5,14 +5,13 @@ import { makeStyles } from '@material-ui/styles';
 import {
   Grid,
   Button,
-  IconButton,
   TextField,
   Link,
   Typography,
   Checkbox,
   FormHelperText,
   Card,
-  CardContent
+  CardContent,
 } from '@material-ui/core';
 
 const constraints = {
@@ -88,7 +87,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
   },
   card: {
-    maxWidth: 1200,
+    width: 1000,
     height: 700,
     margin: theme.spacing(4),
     [theme.breakpoints.down('sm')]: {
@@ -126,7 +125,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const SignUp = props => {
+const Register = props => {
   const { history } = props;
 
   const classes = useStyles();
@@ -192,6 +191,10 @@ const SignUp = props => {
             <div className={classes.contentBody}>
               <Card className={classes.card}>
                 <CardContent>
+                  <form
+                    className={classes.form}
+                    onSubmit={handleSignUp}
+                  >
                   <div className={classes.contentHeader}>
                     <img
                       alt="Logo-SynergyTechnology"
@@ -202,10 +205,6 @@ const SignUp = props => {
                       src="/images/logos/Synhub-black.svg"
                     />
                   </div>
-                  <form
-                    className={classes.form}
-                    onSubmit={handleSignUp}
-                  >
                     <Typography
                       className={classes.title}
                       variant="h2"
@@ -217,7 +216,7 @@ const SignUp = props => {
                       gutterBottom
                     >
                       Use your email to create new account
-                </Typography>
+                    </Typography>
                     <TextField
                       className={classes.textField}
                       error={hasError('firstName')}
@@ -314,7 +313,7 @@ const SignUp = props => {
                       variant="contained"
                     >
                       Sign up now
-                </Button>
+                    </Button>
                     <Typography
                       color="textSecondary"
                       variant="body1"
@@ -326,7 +325,7 @@ const SignUp = props => {
                         variant="h6"
                       >
                         Sign in
-                  </Link>
+                      </Link>
                     </Typography>
                   </form>
                 </CardContent>
@@ -339,4 +338,4 @@ const SignUp = props => {
   )
 }
 
-export default SignUp;
+export default Register;

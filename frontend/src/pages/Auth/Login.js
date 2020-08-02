@@ -7,7 +7,6 @@ import {
   Button,
   Card,
   CardContent,
-  IconButton,
   TextField,
   Link,
   Typography
@@ -35,7 +34,7 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
   },
   grid: {
-    height: '100%'
+    height: '100%',
   },
   content: {
     height: '100%',
@@ -55,8 +54,8 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
   },
   card: {
-    maxWidth: 1200,
-    height: 500,
+    width: 1000,
+    height: 700,
     margin: theme.spacing(4),
     [theme.breakpoints.down('sm')]: {
       height: '100%',
@@ -85,7 +84,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const SignIn = props => {
+const Login = props => {
   const { history } = props;
 
   const classes = useStyles();
@@ -146,25 +145,24 @@ const SignIn = props => {
           lg={12}
           xs={12}
         >
-
           <div className={classes.content}>
             <div className={classes.contentBody}>
               <Card className={classes.card}>
                 <CardContent>
-                  <div className={classes.contentHeader}>
-                    <img
-                      alt="Logo-SynergyTechnology"
-                      src="/images/logos/SynergyTechnology.svg"
-                    />
-                    <img
-                      alt="Logo-Synhub"
-                      src="/images/logos/Synhub-black.svg"
-                    />
-                  </div>
                   <form
                     className={classes.form}
                     onSubmit={handleSignIn}
                   >
+                    <div className={classes.contentHeader}>
+                      <img
+                        alt="Logo-SynergyTechnology"
+                        src="/images/logos/SynergyTechnology.svg"
+                      />
+                      <img
+                        alt="Logo-Synhub"
+                        src="/images/logos/Synhub-black.svg"
+                      />
+                    </div>
                     <Typography
                       className={classes.title}
                       variant="h2"
@@ -217,7 +215,7 @@ const SignIn = props => {
                       variant="contained"
                     >
                       Log in
-                </Button>
+                    </Button>
                     <Typography
                       color="textSecondary"
                       variant="body1"
@@ -229,7 +227,7 @@ const SignIn = props => {
                         variant="h6"
                       >
                         Sign up
-                  </Link>
+                      </Link>
                     </Typography>
                   </form>
                 </CardContent>
@@ -242,4 +240,4 @@ const SignIn = props => {
   )
 }
 
-export default SignIn;
+export default Login;
